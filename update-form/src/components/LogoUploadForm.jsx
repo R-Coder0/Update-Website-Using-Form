@@ -34,7 +34,7 @@ const LogoUploadForm = () => {
     formData.append(type, image);
 
     try {
-      const response = await axios.post(`http://localhost:5000/upload-${type}`, formData, {
+      const response = await axios.post(`http://172.16.2.70:5000/upload-${type}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${auth}`
