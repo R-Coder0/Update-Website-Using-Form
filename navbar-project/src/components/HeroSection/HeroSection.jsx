@@ -10,7 +10,7 @@ const HeroSection = () => {
   useEffect(() => {
     const fetchHeroImage = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/uploads/hero.jpg', { responseType: 'blob' });
+        const response = await axios.get('http://localhost:8000/uploads/hero.jpg', { responseType: 'blob' });
         setHeroImage(URL.createObjectURL(response.data));
       } catch (error) {
         console.error('Error fetching the hero image, using default hero image', error);

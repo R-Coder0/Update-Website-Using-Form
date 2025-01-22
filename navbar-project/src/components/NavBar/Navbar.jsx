@@ -10,7 +10,7 @@ const Navbar = ({ logo }) => {
   useEffect(() => {
     const fetchLogo = async () => {
       try {
-        const response = await axios.get('http://172.16.2.70:5000/uploads/logo.png', { responseType: 'blob' });
+        const response = await axios.get('http://localhost:8000/uploads/logo.png', { responseType: 'blob' });
         setLogoImage(URL.createObjectURL(response.data));
       } catch (error) {
         console.error('Error fetching the logo, using default logo', error);

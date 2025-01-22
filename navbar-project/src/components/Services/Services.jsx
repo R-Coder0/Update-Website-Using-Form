@@ -16,9 +16,9 @@ const Services = () => {
     const fetchServiceImages = async () => {
       try {
         const responses = await Promise.all([
-          axios.get('http://localhost:5000/uploads/service1.jpg', { responseType: 'blob' }),
-          axios.get('http://localhost:5000/uploads/service2.jpg', { responseType: 'blob' }),
-          axios.get('http://localhost:5000/uploads/service3.jpg', { responseType: 'blob' }),
+          axios.get('http://localhost:8000/uploads/service1.jpg', { responseType: 'blob' }),
+          axios.get('http://localhost:8000/uploads/service2.jpg', { responseType: 'blob' }),
+          axios.get('http://localhost:8000/uploads/service3.jpg', { responseType: 'blob' }),
         ]);
 
         setServiceImages({

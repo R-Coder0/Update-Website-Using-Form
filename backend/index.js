@@ -5,7 +5,7 @@ const path = require('path');
 const jwt = require('jsonwebtoken');
 
 const app = express();
-const port = 5000;
+const port = 8000;
 
 const users = [
   {

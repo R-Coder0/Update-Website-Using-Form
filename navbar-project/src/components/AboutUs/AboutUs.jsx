@@ -9,7 +9,7 @@ const AboutUs = () => {
   useEffect(() => {
     const fetchAboutImage = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/uploads/about.jpg', { responseType: 'blob' });
+        const response = await axios.get('http://localhost:8000/uploads/about.jpg', { responseType: 'blob' });
         setAboutImage(URL.createObjectURL(response.data));
       } catch (error) {
         console.error('Error fetching the About Us image, using default image', error);

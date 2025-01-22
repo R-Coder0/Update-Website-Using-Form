@@ -34,7 +34,7 @@ const LogoUploadForm = () => {
     formData.append(type, image);
 
     try {
-      const response = await axios.post(`http://172.16.2.70:5000/upload-${type}`, formData, {
+      await axios.post(`http://localhost:8000/upload-${type}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
           'Authorization': `Bearer ${auth}`
@@ -70,35 +70,35 @@ const LogoUploadForm = () => {
         <h2>Update Hero Image</h2>
         <label htmlFor="hero-upload">Upload New Hero Image</label>
         <input type="file" id="hero-upload" accept="image/*" onChange={(e) => handleImageChange(e, setHero)} />
-        {hero && <img src={URL.createObjectURL(hero)} alt="Selected Hero Image" />}
+        {hero && <img src={URL.createObjectURL(hero)} alt="Selected Hero" />}
         <button type="submit">Submit</button>
       </form>
       <form className="upload-form" onSubmit={(e) => handleSubmit(e, 'service1', service1)}>
         <h2>Update Service 1 Image</h2>
         <label htmlFor="service1-upload">Upload New Service 1 Image</label>
         <input type="file" id="service1-upload" accept="image/*" onChange={(e) => handleImageChange(e, setService1)} />
-        {service1 && <img src={URL.createObjectURL(service1)} alt="Selected Service 1 Image" />}
+        {service1 && <img src={URL.createObjectURL(service1)} alt="Selected Service 1" />}
         <button type="submit">Submit</button>
       </form>
       <form className="upload-form" onSubmit={(e) => handleSubmit(e, 'service2', service2)}>
         <h2>Update Service 2 Image</h2>
         <label htmlFor="service2-upload">Upload New Service 2 Image</label>
         <input type="file" id="service2-upload" accept="image/*" onChange={(e) => handleImageChange(e, setService2)} />
-        {service2 && <img src={URL.createObjectURL(service2)} alt="Selected Service 2 Image" />}
+        {service2 && <img src={URL.createObjectURL(service2)} alt="Selected Service 2" />}
         <button type="submit">Submit</button>
       </form>
       <form className="upload-form" onSubmit={(e) => handleSubmit(e, 'service3', service3)}>
         <h2>Update Service 3 Image</h2>
         <label htmlFor="service3-upload">Upload New Service 3 Image</label>
         <input type="file" id="service3-upload" accept="image/*" onChange={(e) => handleImageChange(e, setService3)} />
-        {service3 && <img src={URL.createObjectURL(service3)} alt="Selected Service 3 Image" />}
+        {service3 && <img src={URL.createObjectURL(service3)} alt="Selected Service 3" />}
         <button type="submit">Submit</button>
       </form>
       <form className="upload-form" onSubmit={(e) => handleSubmit(e, 'about', about)}>
         <h2>Update About Us Image</h2>
         <label htmlFor="about-upload">Upload New About Us Image</label>
         <input type="file" id="about-upload" accept="image/*" onChange={(e) => handleImageChange(e, setAbout)} />
-        {about && <img src={URL.createObjectURL(about)} alt="Selected About Us Image" />}
+        {about && <img src={URL.createObjectURL(about)} alt="Selected About Us" />}
         <button type="submit">Submit</button>
       </form>
     </div>

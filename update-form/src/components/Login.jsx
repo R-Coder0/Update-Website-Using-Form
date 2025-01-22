@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://172.16.2.70:5000/login', { username, password });
+      const response = await axios.post('http://localhost:8000/login', { username, password });
       login(response.data.accessToken);
       navigate('/upload');
     } catch (error) {
